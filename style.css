@@ -1,0 +1,202 @@
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --error-color:rgb(161, 8, 8);
+    --success-color:rgb(26, 224, 26);
+}
+body{
+    background-color: hsl(210,40%,50%);
+}
+.container{
+    height: auto;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
+.container h2{
+    text-align: center;
+    font-family: arial;
+    color: hsl(210,60%,80%);
+    font-weight: bolder;
+}
+fieldset{
+    margin-top: 0.5rem;
+    border-color: hsl(210,50%,70%);
+    border-radius: 4px;
+    box-shadow:0 2px 5px;
+}
+fieldset legend{
+    color: rgb(204, 170, 125);
+    font-size: 18px;
+    font-family: arial;
+    margin-left: 0.5rem;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+.details-holder{
+    position: relative;
+    margin: 0.5rem 1rem;
+}
+.details-holder small{
+    display:block;
+    text-align: center;
+    width: 70%;
+    font-family: arial;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color:var(--error-color);
+    visibility: hidden;
+}
+/*STYLING THE STUDENTS-DETAILS HOLDER ALERT(ABOVE THE INPUT)*/
+.error.details-holder small{
+    visibility: visible;
+}
+.error.details-holder input{
+    border-color: var(--error-color);
+}
+
+.details-holder input{
+    width: 70%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 3px solid rgb(172, 150, 150);
+    font-family: arial;
+}
+.details-holder input:focus{
+    outline: 0;
+    border-color:rgb(199, 176, 46);
+    transition: .4s;
+}
+.details-holder input::placeholder{
+    color:sienna;
+    font-size: 17px;
+    font-family: arial;
+}
+.details-holder button{
+    width: 25%;
+    background-color: chocolate;
+    padding: 8.5px;
+    border-radius: 7px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: transparent;
+    font-size: 18px;
+}
+.details-holder button:hover{
+    cursor: pointer;
+    transition: .4s;
+    background-color: seagreen;
+}
+
+
+
+/*Start of styling for the alert containe*/
+.alert-container{
+    font-weight: bolder;
+    font-family: arial;
+    width: 100%;
+    text-align: center;
+    top: 0rem;
+    position: absolute;
+   visibility: hidden;
+}
+.alert-danger{
+    color: var(--error-color);
+    visibility:visible;
+}
+.alert-success{
+    color: var(--success-color);
+    visibility:visible;
+}
+/*End of styling for the alert container*/
+
+/*STYLING THE DETAILS CONTAINER*/
+.field2{
+    position: relative;
+    padding-top: 1rem;
+    display: none;
+}
+.show-field2{
+    display: block;
+}
+.list-container{
+    margin: 1rem;
+}
+
+.clear-details{
+    display:none;
+    background-color: brown;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 7px;
+    margin-bottom: 0.2rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-family: arial;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.show-clear_details{
+    display: block;
+}
+.clear-details:hover{
+    background-color: seagreen;
+    transition: .4s;
+}
+
+
+/*STYLING THE INDIVIDUAL CONTAINERS CREATED IN JAVASCRIPT*/
+.individual-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    margin-top: 0.2rem;
+}
+.individual-element p{
+    text-transform: uppercase;
+    color:rgb(218, 150, 62);
+    font-weight: bolder;
+    font-family: arial;
+    margin-left: 10%;
+    letter-spacing: 1px;
+}
+.btns-holder{
+    margin-right: 8%;
+}
+.btns-holder button{
+    width: 100px;
+    padding: 6px;
+    border-radius: 7px;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: arial;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.edit-btn{
+    background-color: seagreen;
+}
+.edit-btn:hover{
+    background-color: rgb(29, 215, 221);
+    transition: .4s;
+}
+
+
+.delete-btn{
+    background-color:var(--error-color);
+}
+.delete-btn:hover{
+    background-color: chocolate;
+    transition: .4s;
+}
